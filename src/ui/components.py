@@ -7,7 +7,9 @@ def render_sidebar(default_path):
 
 def render_file_selector(files):
     indice_idx = 0
-    if "INDICE.md" in files:
-        indice_idx = files.index("INDICE.md")
+    for i, f in enumerate(files):
+        if f.name == "README.md":
+            indice_idx = i
+            break
     
-    return st.sidebar.radio("Documentos:", files, index=indice_idx)
+    return st.sidebar.radio("Documentos:", files, index=indice_idx, format_func=lambda x: x.name)
