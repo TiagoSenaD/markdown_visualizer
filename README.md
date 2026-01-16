@@ -33,6 +33,7 @@ streamlit run main.py
 ## Erros conhecidos
 
 - [] os links internos do markdown estão abrindo uma nova guia invez de ir para o link
+- [x] Trocar o impot os pelo impoort PATH por questão de segurança
 
 
 ## TODO
