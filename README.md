@@ -40,7 +40,7 @@ streamlit run main.py
 
 - [] Adicionar um botão pra navegar entre os arquivos
 - [] Botão pra trancar o caminho digitado (pra não apagar acidentalmente)
-- [] renderizar mermaid
+- [x] renderizar mermaid
 - [] Busca global da informaçãona pasta entre os arquivos
 
 
