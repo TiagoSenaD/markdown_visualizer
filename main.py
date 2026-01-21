@@ -7,17 +7,15 @@ st.set_page_config(page_title="MD Viewer Pro", layout="wide")
 
 def main():
     caminho = components.render_sidebar(Path.cwd())
-    
     arquivos = MarkdownReader.get_md_files(caminho)
     
     if arquivos:
         escolha = components.render_file_selector(arquivos)
-        
         conteudo = MarkdownReader.read_file(caminho, escolha)
         
-        st.markdown(conteudo, unsafe_allow_html=True)
+        components.render_content(conteudo) 
     else:
-        st.error("Nenhum arquivo .md ou caminho inválido.")
+        st.error("Caminho inválido ou sem arquivos .md")
 
 if __name__ == "__main__":
     main()
